@@ -1,0 +1,40 @@
+include _mixins-links.pug
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		
+		//======= swipe =============
+		link(rel="stylesheet" href="libs/swiper/swiper.min.css" )
+		
+		//======= галерея lightbox =============
+		link(rel="stylesheet" href="./libs/lightbox/css/lightbox.css" )
+		
+		//=======убрать перевод цифр в номер телефона на ios  и safari ======
+		meta(name="format-detection" content="telephone=no")
+		
+		
+		link(rel="stylesheet", href="css/main.css")
+		title !{title}
+		
+	body(class=(bodyCl !=="" ? bodyCl : ''))
+		#overlay
+		block content
+		
+		//=============== jquery ===================
+		script(src="./libs/jquery/jquery-3.0.0.min.js")
+		
+		//=============== swiper ===================
+		script(src="libs/swiper/swiper.js")
+		
+		//=============== lightbox ===================
+		script(src="./libs/lightbox/js/lightbox.min.js")
+		
+				
+		//=============== мои скрипты ===================
+		
+		script(src="./js/main.js")
