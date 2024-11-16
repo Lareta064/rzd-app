@@ -11,7 +11,8 @@ const del = require("del");
 var gcmq = require("gulp-group-css-media-queries");
 const formatHtml = require('gulp-format-html');
 const imagemin = require('gulp-imagemin');
-
+const webp = require('gulp-webp');
+const ttf2woff2 = require('gulp-ttf2woff2');
 
 // Таск для сборки Gulp файлов
 gulp.task("pug", function(callback) {
@@ -36,6 +37,18 @@ gulp.task("pug", function(callback) {
         .pipe(gulp.dest("./build/"))
         .pipe(browserSync.stream());
     callback();
+});
+
+// Таск для конвертации TTF в WOFF2 и копирования других шрифтов
+gulp.task('fonts', function() {
+    // Конвертация TTF в WOFF2
+    gulp.src('./src/fonts/*.ttf')
+        .pipe(ttf2woff2())
+        .pipe(gulp.dest('./build/fonts/'));
+
+    // Копирование остальных форматов шрифтов
+    return gulp.src('./src/fonts/*.{woff,woff2,otf}')
+        .pipe(gulp.dest('./build/fonts/'));
 });
 
 // Таск для компиляции SCSS в CSS
@@ -68,51 +81,37 @@ gulp.task("scss", function(callback) {
         .pipe(browserSync.stream());
     callback();
 });
-gulp.task('imagemin', ()=>{
-    return gulp.src('./src/img/**')
-    .pipe(imagemin({
-        progressive: true
-    }))
-    .pipe(gulp.dest('./build/img/'))
-});
+
 // Копирование Изображений
 gulp.task("copy:img", function(callback) {
-    return gulp.src("./src/img/**/*.*").pipe(gulp.dest("./build/img/"));
+    return gulp.src("./src/img/**/*.*")
+        .pipe(webp())
+        .pipe(gulp.dest("./build/img/"));
     callback();
 });
-gulp.task("copy:fonts", function(callback) {
-    return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./build/fonts/"));
-    callback();
-});
+
 gulp.task("copy:libs", function(callback) {
     return gulp.src("./src/libs/**/*.*").pipe(gulp.dest("./build/libs/"));
     callback();
 });
+
 // Копирование Скриптов
 gulp.task("copy:js", function(callback) {
     return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
     callback();
 });
+
 gulp.task("copy:video", function(callback) {
     return gulp.src("./src/video/**/*.*").pipe(gulp.dest("./build/video/"));
     callback();
 });
-// группировка меди запросов
-// gulp.task('groupmedia', function (callback) {
-
-//     return gulp.src('./build/css/main.css')
-//         .pipe(gcmq())
-//         .pipe(gulp.dest('./build/css/'));
-//         callback();
-// });
 
 // Слежение за HTML и CSS и обновление браузера
 gulp.task("watch", function() {
     // Следим за картинками и скриптами и обновляем браузер
     watch(
-        ["./build/js/**/*.*", "./build/img/**/*.*" , "./build/fonts/**/*.*" , "./build/libs/**/*.*", "./build/video/**/*.*" ],
+        ["./build/js/**/*.*", "./build/img/**/*.*" ,  "./build/libs/**/*.*", "./build/video/**/*.*" ],
         gulp.parallel(browserSync.reload)
-       
     );
 
     // Запуск слежения и компиляции SCSS с задержкой
@@ -124,13 +123,13 @@ gulp.task("watch", function() {
     watch("./src/pug/**/*.pug", gulp.parallel("pug"));
 
     // Следим за картинками и скриптами, и копируем их в build
-    watch("./src/img/**/*.*", gulp.series('imagemin'), gulp.parallel("copy:img"));
-    
+    watch("./src/img/**/*.*",gulp.parallel("copy:img")); 
     watch("./src/js/**/*.*", gulp.parallel("copy:js"));
-    watch("./src/fonts/**/*.*", gulp.parallel("copy:fonts"));
     watch("./src/libs/**/*.*", gulp.parallel("copy:libs"));
-    watch("./src/libs/**/*.*", gulp.parallel("copy:video"));
+    watch("./src/video/**/*.*", gulp.parallel("copy:video"));
 
+    // Слежение за шрифтами
+    watch("./src/fonts/**/*.*", gulp.parallel("fonts"));
 });
 
 // Задача для старта сервера из папки app
@@ -150,17 +149,16 @@ gulp.task("html:prettify", function() {
     return gulp
     .src('build/**/*.html')
     .pipe(formatHtml())
-    .pipe(gulp.dest('./build/'))
+    .pipe(gulp.dest('./build/'));
 });
-// Дефолтный таск (задача по умолчанию)
+
 // Запускаем одновременно задачи server и watch
 gulp.task(
     "default",
     gulp.series(
         gulp.parallel("clean:build"),
-        gulp.parallel("scss", "pug", "copy:img", "copy:js", "copy:fonts", "copy:libs", "copy:video"),
+        gulp.parallel("scss", "fonts", "pug", "copy:img", "copy:js", "copy:libs", "copy:video"),
         gulp.parallel("html:prettify"),
         gulp.parallel("server", "watch"),
-        gulp.parallel("imagemin")
     )
 );

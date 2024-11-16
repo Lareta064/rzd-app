@@ -26,6 +26,8 @@
 	"devDependencies": {
 		"gulp-format-html": "^1.2.5",
 		"gulp-imagemin": "^7.0.0",
-		"gulp-pretty-html": "^2.0.10"
+		"gulp-pretty-html": "^2.0.10",
+		"gulp-ttf2woff2": "^4.0.1",
+		"gulp-webp": "^4.0.1"
 	}
 }
