@@ -1,6 +1,9 @@
 
 *, *:after, *:before {
 	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 
 html {
