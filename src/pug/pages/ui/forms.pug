@@ -12,7 +12,49 @@ html(lang="ru")
 		meta(name="format-detection" content="telephone=no")
 		link(rel="stylesheet", href="../css/main.css")
 		title UI-KIT
-
+		style.
+			@font-face {
+				font-family: "IBM Plex Sans";
+				src: url("../fonts/IBMPlexSans-Regular.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "IBM Plex Sans";
+				src: url("../fonts/IBMPlexSans-Medium.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 500;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "IBM Plex Sans";
+				src: url("../fonts/IBMPlexSans-SemiBold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 600;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "IBM Plex Sans";
+				src: url("../fonts/IBMPlexSans-Bold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RussianRail G Pro";
+				src: url("../fonts/russianrailgpro-extended.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 400;
+				font-display: swap;
+				}
+			@font-face {
+				font-family: "RussianRail G Pro";
+				src: url("../fonts/russianrailgpro-extendedbold.woff2") format("woff2");
+				font-style: normal;
+				font-weight: 700;
+				font-display: swap;
+				}
 	body.body-dashboard
 
 		include ../../ui/ui-navigation.pug
@@ -24,15 +66,57 @@ html(lang="ru")
 				.container-dashboard__content
 				.form-item
 					label.input-label Ручной ввод
-					input(type="text" placeholder="Значение, м")
+					input.form-input(type="text" placeholder="Значение, м")
 				pre.
 					.form-item
 						label.input-label Ручной ввод
-						input(type="text" placeholder="Значение, м")
-				
-				.form-item
+						input.form-input(type="text" placeholder="Значение, м")
+				hr
+				.form-group
 					label.input-label Пройденное расстояние
-					.form-item-group
+					.flex-row
 						.field
 							span.field-value 128 м
-							span.val-up
+							span.arrow-small-up
+						.field
+							span.field-value 128 м
+							span.arrow-small-down
+				hr
+				.form-item
+					label.input-label Предустановки 
+					.flex-row
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+				hr
+				fieldset.fieldset
+					.fieldset-inputs
+						.form-group
+							label.input-label Пройденное расстояние
+							.flex-row
+								.field
+									span.field-value 128 м
+									span.arrow-small-up
+								.field
+									span.field-value 128 м
+									span.arrow-small-down
+						.form-group
+							label.input-label Ручной ввод
+							.flex-row
+								.form-item
+									input.form-input(type="text" placeholder="Значение, м")
+								.form-item
+									input.form-input(type="text" placeholder="Значение, м")
+					
+					.fieldset-buttons
+						.form-group
+							label.input-label.txt-12 Предустановки 
+							.flex-row
+								.btn-slim xxxxx м
+								.btn-slim xxxxx м
+								.btn-slim xxxxx м
+								.btn-slim xxxxx м
+								.btn-slim xxxxx м
+						button.btn Старт

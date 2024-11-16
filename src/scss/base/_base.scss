@@ -27,6 +27,7 @@ body {
 	font-size: 16px;
 	-webkit-font-smoothing: antialiased;
 	line-height: 1.3;
+	background-color: $bg;
 }
 
 .lock{
@@ -105,3 +106,10 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
+.flex-row,.field{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	column-gap:12px;
+}
+.txt-12{font-size: 12px!important;}

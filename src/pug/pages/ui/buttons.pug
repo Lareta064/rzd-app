@@ -64,13 +64,36 @@ html(lang="ru")
 				h2 Кнопки
 
 				.container-dashboard__content
+					h3 #[strong класс btn]
+					br
 					button.btn СТАРТ
 					pre.
 						button.btn СТАРТ
+					hr
+					a(href="#!").btn СТАРТ
+					pre.
+						a(href="#!").btn СТАРТ
+					hr
+					input.btn(type="submit" value="СТАРТ")
+					pre.
+						input.btn(type="submit" value="СТАРТ")
+					hr
+					h3 #[strong класс light-btn]
+					br
 					button.light-btn Войти
 					pre.
 						button.light-btn Войти
-					
+					hr
+					a(href="#!").light-btn Войти
+					pre.
+						a(href="#!").light-btn Войти
+					hr
+					input.light-btn(type="submit" value="Войти")
+					pre.
+						input.light-btn(type="submit" value="Войти")
+					hr
+					h3 #[strong класс .btn-round  кнопка с иконкой]
+					br
 					button.btn-round
 						i
 							img(src="../img/icons/user.svg", width="22" height="22" alt="user")
@@ -80,15 +103,30 @@ html(lang="ru")
 							i
 								img(src="../img/icons/user.svg", width="22" height="22" alt="user")
 							span Иван Иванов
-					button.btn-round
+					hr
+					a(href="#!").btn-round
 						i
-							img(src="../img/icons/save.svg", width="20" height="20" alt="user")
-						span Сохранить измерение
+							img(src="../img/icons/user.svg", width="22" height="22" alt="user")
+						span Иван Иванов
 					pre.
-						button.btn-round
+						a(href="#!").btn-round
 							i
-								img(src="../img/icons/save.svg", width="20" height="20" alt="user")
-							span Сохранить измерение
+								img(src="../img/icons/user.svg", width="22" height="22" alt="user")
+							span Иван Иванов
+					hr
+					h3 #[strong класс .btn-round  кнопка без иконки]
+					br
+					input.btn-round(type="submit" value="Сохранить изменения")
+						
+					pre.
+						input.btn-round(type="submit" value="Сохранить изменения")
+					hr
+					a(href="#!").btn-round Сохранить изменения
+					pre.
+						a(href="#!").btn-round Сохранить изменения
+					hr
+					h3 #[strong класс btn-transform]
+					br
 					button.btn-transform
 						img(src="../img/icons/settings.svg", width="20" height="20" alt="user")
 					pre.
@@ -104,3 +142,9 @@ html(lang="ru")
 					button.btn-grey Забыли пароль?
 					pre.
 						button.btn-grey Забыли пароль?
+					.flex-row
+						a(href="#!").btn-slim xxxxx м
+						buttom.btn-slim xxxxx м
+						input.btn-slim(type="submit" value="xxxxx м")
+
+						
