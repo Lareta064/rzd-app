@@ -84,4 +84,13 @@ select:-webkit-autofill:focus {
   align-items: flex-end;
   .btn{width: 220px; flex-shrink: 0;}
   .form-group{flex-grow:1;}
+  @media (max-width: 1000px) {
+    flex-wrap:wrap;
+    row-gap:12px;
+    .btn { width: 100%; }
+    
+   .presets-row .btn-slim:nth-child(n+4){
+     display: none!important;
+   }
+  }
 }
