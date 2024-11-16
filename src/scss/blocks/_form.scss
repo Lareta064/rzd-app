@@ -73,10 +73,11 @@ select:-webkit-autofill:focus {
   .field, .form-item, .form-group{
     flex-grow:1;
   }
-    @media (max-width: 1000px) {
-      grid-template-columns: 1fr;
-      row-gap:12px;
-    }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    row-gap:12px;
+    margin-bottom: 14px;
+  }
 }
 .fieldset-buttons{
   display: flex;
@@ -86,7 +87,7 @@ select:-webkit-autofill:focus {
   .form-group{flex-grow:1;}
   @media (max-width: 1000px) {
     flex-wrap:wrap;
-    row-gap:12px;
+    row-gap:16px;
     .btn { width: 100%; }
     
    .presets-row .btn-slim:nth-child(n+4){

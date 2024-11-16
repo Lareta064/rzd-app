@@ -1,0 +1,9 @@
+.options-block{
+	&>*+*{margin-top:20px;}
+	@media (max-width: 767px) {
+		&>*+* {margin-top: 14px;}
+	}
+	@media (max-width: 599px) {
+		&>*+* {margin-top: 10px;}
+	}
+}
