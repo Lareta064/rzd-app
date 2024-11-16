@@ -1,0 +1,36 @@
+extends ../layouts/layout.pug
+
+block content
+	.main-content
+		fieldset.fieldset
+			.fieldset-inputs
+				.form-group
+					label.input-label Пройденное расстояние
+					.flex-row
+						.field
+							span.field-value 128 м
+							span.arrow-small-up
+						.field
+							span.field-value 128 м
+							span.arrow-small-down
+				.form-group
+					label.input-label Ручной ввод
+					.flex-row
+						.form-item
+							input.form-input(type="text" placeholder="Значение, м")
+						.form-item
+							input.form-input(type="text" placeholder="Значение, м")
+			
+			.fieldset-buttons
+				.form-group
+					label.input-label.txt-12 Предустановки 
+					.flex-row
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+						.btn-slim xxxxx м
+				button.btn Старт
+	
+block variables
+	-var title = "Главная";
