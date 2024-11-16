@@ -106,7 +106,7 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
-.flex-row,.field{
+.flex-row,.field,.profile-group,.flex-item,.main-content-header{
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -135,7 +135,7 @@ input[type="submit"] {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	column-gap:40px;
-	row-gap:20px;
+	grid-row-gap:8px;
 	@media (max-width: 1000px) {
 		
 		grid-template-columns: repeat(2, 1fr) 134px;

@@ -80,17 +80,17 @@ html(lang="ru")
 					hr
 					h3 #[strong класс light-btn]
 					br
-					button.light-btn Войти
+					button.btn-light Войти
 					pre.
-						button.light-btn Войти
+						button.btn-light Войти
 					hr
-					a(href="#!").light-btn Войти
+					a(href="#!").btn-light Войти
 					pre.
-						a(href="#!").light-btn Войти
+						a(href="#!").btn-light Войти
 					hr
-					input.light-btn(type="submit" value="Войти")
+					input.btn-light(type="submit" value="Войти")
 					pre.
-						input.light-btn(type="submit" value="Войти")
+						input.btn-light(type="submit" value="Войти")
 					hr
 					h3 #[strong класс .btn-round  кнопка с иконкой]
 					br
@@ -158,5 +158,15 @@ html(lang="ru")
 					pre.
 						.btn-big.btn-press
 							span.arrow-down
+					br
+					.profile-group
+						a(href="#!").btn-round
+							span.icon-box
+								img(src="../img/icons/user.svg", width="22" height="22" alt="user")
+							span Иван Иванов
+						//===button exit ===
+						button.btn-light.btn-exit(type="button")
+							img.btn-img(src="../img/icons/exit.svg", width="22" height="22" alt="exit")
+							span Выйти
 
 						

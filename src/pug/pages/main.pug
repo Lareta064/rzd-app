@@ -2,7 +2,44 @@ extends ../layouts/layout.pug
 
 block content
 	.main-content
+		//===MAIN CONTENT HEADER====
 		.main-content-header
+			.app-name.flex-item
+				img.flex-img(src="./img/icons/wifi.svg" width="21" height="21" alt="icon")
+				span Робот №45
+			//==== battery for 1024 ===
+			.battery-box.flex-item.visible-1024
+				img.flex-img(src="./img/icons/battery.svg" width="21" height="21" alt="icon")
+				span 54%
+			.flex-row.settings-group
+				button.btn-transform
+					img(src="../img/icons/settings.svg", width="20" height="20" alt="user")
+					span Настройки
+				button.btn-transform
+					img(src="../img/icons/tools.svg", width="20" height="20" alt="user")
+					span Измерения
+			//====LOGO====
+			.logo
+				svg.svg-logo
+					use(href="./img/logo.svg#svg-logo")
+			
+			//======PROFILE GROUP ===
+			.profile-group
+				a(href="#!").btn-round
+					span.icon-box
+						img(src="../img/icons/user.svg", width="22" height="22" alt="user")
+					span Иван Иванов
+				//===button exit ===
+				button.btn-light.btn-exit(type="button")
+					img.btn-img(src="../img/icons/exit.svg", width="22" height="22" alt="exit")
+					span Выйти
+				//==== battery for < 1024 ===
+				.battery-box.flex-item.hide-1024
+					img.flex-img(src="./img/icons/battery.svg" width="21" height="21" alt="icon")
+					span 54%
+		
+		
+		//===MAIN CONTENT BODY====
 		.main-content-grid
 			//=== fieldset ====
 			.column-first
@@ -39,7 +76,7 @@ block content
 			.column-two
 				//=====OPTIONS ======
 				.options-block
-					.flex-row
+					.flex-row.settings-group
 						button.btn-transform
 							img(src="../img/icons/settings.svg", width="20" height="20" alt="user")
 							span Настройки

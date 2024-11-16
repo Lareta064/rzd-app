@@ -4,8 +4,8 @@
 	@media (max-width: 1000px) {
 		.flex-row {
 			display: flex;
-			&>*{flex-grow: 1;}
 			margin-bottom: 18px;
+			&>*{flex-grow: 1;}
 		}
 	}
 	@media (max-width: 599px) {

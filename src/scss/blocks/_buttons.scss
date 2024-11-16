@@ -1,4 +1,4 @@
-.btn,.light-btn,.btn-round,.btn-grey,.btn-slim, .option-btn{
+.btn,.btn-light,.btn-round,.btn-grey,.btn-slim, .option-btn{
 	display: flex;
 	height: 48px;
 	font-family: $ff;
@@ -14,6 +14,7 @@
 	text-align: center;
 	color: $black;
 	white-space: nowrap;
+	border-radius: 8px;
 }
 .btn{
 	min-width: 220px;
@@ -63,7 +64,7 @@
 		height: 20px;
 	}
 }
-.btn-transform, .icon-box,.light-btn,
+.btn-transform, .icon-box,.btn-light,
 .btn-round, .option-btn{
 	box-shadow: 5px 5px 10px 0 rgba(174, 174, 192, 0.2), -5px -5px 5px 0 rgba(255, 255, 255, 0.4), inset 2px 2px 4px 0 #fff, inset -2px -2px 4px 0 rgba(0, 0, 0, 0.1);
 	background: $bg;
@@ -94,7 +95,7 @@
 }
 .btn-big{
 	border-radius: 12px 12px 100px 100px;
-	width: 210px;
+	width: 212px;
 	height: 210px;
 	display: flex;
 	justify-content: center;

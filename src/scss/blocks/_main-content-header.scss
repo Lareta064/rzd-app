@@ -1,5 +1,62 @@
 .main-content-header{
-	padding-top: 12px;
-	padding-bottom: 12px;
-	min-height: 72px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	column-gap:20px;
+	position: relative;
+	
+	.settings-group{column-gap:10px;width: fit-content;}
+	.settings-group .btn-transform span{display: none;}
+	.logo{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	
+	}
+	.profile-group{margin-left: auto;width:fit-content;}
+	@media (max-width: 1000px) {
+		.settings-group{display: none;}
+		.profile-group .btn-light, .profile-group .btn-round{height: 40px; font-size: 14px; min-width: unset;}
+		.profile-group .btn-round .icon-box {width: 32px; height: 32px;}
+		.profile-group .btn-round img{width: 19px;
+		height: 19px;}
+	}
+	@media (max-width: 767px) {
+		flex-wrap:wrap;
+	.settings-group {
+		display: flex;
+		.btn-transform span {display: block;}
+		}
+	}
+}
+.app-name, .battery-box{width: fit-content;flex-shrink: 0;}
+.battery-box{column-gap:5px;}
+.battery-box.visible-1024{
+	@media (max-width: 1000px) {display: none;}
+
+			
+		
+		
+	
+}
+.battery-box.hide-1024{
+	display: none;
+	@media (max-width: 1000px) {display: flex;}
+}
+.flex-item{
+	font-weight: 500;
+}
+.profile-group{
+	display: flex;
+	align-items: center;
+	.btn-round{width: fit-content;}
+}
+.btn-exit{
+	
+	padding-left: 16px;
+	padding-right: 16px;
+	
+	width: fit-content;
+	min-width: 103px;
+	.btn-img{display: none;}
 }
