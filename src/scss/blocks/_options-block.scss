@@ -1,9 +1,24 @@
 .options-block{
-	&>*+*{margin-top:20px;}
-	@media (max-width: 767px) {
-		&>*+* {margin-top: 14px;}
+	&>*+*{margin-top:14px;}
+	.flex-row{display: none;}
+	@media (max-width: 1000px) {
+		.flex-row {
+			display: flex;
+			&>*{flex-grow: 1;}
+			margin-bottom: 18px;
+		}
 	}
 	@media (max-width: 599px) {
 		&>*+* {margin-top: 10px;}
+	}
+	@media (max-width: 767px) {
+		.flex-row {display: none;}
+	}
+}
+.option-btn {
+	height: 52px;
+	.icon-box {
+		width: 44px;
+		height: 44px;
 	}
 }

@@ -2,65 +2,76 @@ extends ../layouts/layout.pug
 
 block content
 	.main-content
+		.main-content-header
 		.main-content-grid
 			//=== fieldset ====
-			fieldset.fieldset
-				.fieldset-inputs
-					.form-group
-						label.input-label Пройденное расстояние
-						.flex-row
-							.field
-								span.field-value 128 м
-								span.arrow-small-up
-							.field
-								span.field-value 128 м
-								span.arrow-small-down
-					.form-group
-						label.input-label Ручной ввод
-						.flex-row
-							.form-item
-								input.form-input(type="text" placeholder="Значение, м")
-							.form-item
-								input.form-input(type="text" placeholder="Значение, м")
-				
-				.fieldset-buttons
-					.form-group
-						label.input-label.txt-12 Предустановки 
-						.flex-row.presets-row
-							.btn-slim xxxxx м
-							.btn-slim.btn-slim--active 1024 м
-							.btn-slim xxxxx м
-							.btn-slim xxxxx м
-							.btn-slim xxxxx м
-					button.btn Старт
-
-			//=====OPTIONS ======
-			.options-block
-				button.btn-round
-					span.icon-box
-						img(src="../img/icons/plus.svg", width="22" height="22" alt="icon")
-					span Начать новое измерение
-				button.btn-round
-					span.icon-box
-						img(src="../img/icons/save.svg", width="22" height="22" alt="icon")
-					span Сохранить измерение
-				button.btn-round
-					span.icon-box
-						img(src="../img/icons/disk.svg", width="22" height="22" alt="icon")
-					span Скачать данные
-				button.btn-round
-					span.icon-box
-						img(src="../img/icons/stop.svg", width="22" height="22" alt="icon")
-					span САМОСБРОС
+			.column-first
+				fieldset.fieldset
+					.fieldset-inputs
+						.form-group
+							label.input-label Пройденное расстояние
+							.flex-row
+								.field
+									span.field-value 128 м
+									span.arrow-small-up
+								.field
+									span.field-value 128 м
+									span.arrow-small-down
+						.form-group
+							label.input-label Ручной ввод
+							.flex-row
+								.form-item
+									input.form-input(type="text" placeholder="Значение, м")
+								.form-item
+									input.form-input(type="text" placeholder="Значение, м")
+					
+					.fieldset-buttons
+						.form-group
+							label.input-label.txt-12 Предустановки 
+							.flex-row.presets-row
+								.btn-slim xxxxx м
+								.btn-slim.btn-slim--active 1024 м
+								.btn-slim xxxxx м
+								.btn-slim xxxxx м
+								.btn-slim xxxxx м
+						button.btn Старт
 			
-			//=======BIG BUTTONS ====
-			.action-buttons
-				//==== big btn ===
-				.btn-big.btn-big--up
-					span.arrow-up
-				//==== big btn ===
-				.btn-big
-					span.arrow-down
+			.column-two
+				//=====OPTIONS ======
+				.options-block
+					.flex-row
+						button.btn-transform
+							img(src="../img/icons/settings.svg", width="20" height="20" alt="user")
+							span Настройки
+						button.btn-transform
+							img(src="../img/icons/tools.svg", width="20" height="20" alt="user")
+							span Измерения
+					
+					button.option-btn
+						span.icon-box
+							img(src="../img/icons/plus.svg", width="24" height="24" alt="icon")
+						span Начать новое измерение
+					button.option-btn
+						span.icon-box
+							img(src="../img/icons/save.svg", width="24" height="24" alt="icon")
+						span Сохранить измерение
+					button.option-btn
+						span.icon-box
+							img(src="../img/icons/disk.svg", width="24" height="24" alt="icon")
+						span Скачать данные
+					button.option-btn
+						span.icon-box
+							img(src="../img/icons/stop.svg", width="24" height="24" alt="icon")
+						span САМОСБРОС
+			.column-third
+				//=======BIG BUTTONS ====
+				.action-buttons
+					//==== big btn ===
+					.btn-big.btn-big--up
+						span.arrow-up
+					//==== big btn Класс btn-press делает кнопку нажатой===
+					.btn-big.btn-press
+						span.arrow-down
 	
 block variables
 	-var title = "Главная";

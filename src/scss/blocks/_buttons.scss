@@ -1,4 +1,4 @@
-.btn,.light-btn,.btn-round,.btn-grey,.btn-slim{
+.btn,.light-btn,.btn-round,.btn-grey,.btn-slim, .option-btn{
 	display: flex;
 	height: 48px;
 	font-family: $ff;
@@ -26,11 +26,11 @@
 	color: #fff;
 	text-transform: uppercase;
 }
-.btn-round:has(>.icon-box){
+.btn-round:has(>.icon-box), .option-btn{
 	justify-content: flex-start;
 	
 }
-.btn-round{
+.btn-round, .option-btn{
 	padding: 4px;
 	padding-right: 18px;
 	border-radius: 40px;
@@ -49,7 +49,7 @@
 .btn-transform{
 	display: inline-flex;
 	width: fit-content;
-	column-gap:10px;
+	column-gap:6px;
 	height: 48px;
 	min-width: 48px;
 	display: flex;
@@ -64,7 +64,7 @@
 	}
 }
 .btn-transform, .icon-box,.light-btn,
-.btn-round{
+.btn-round, .option-btn{
 	box-shadow: 5px 5px 10px 0 rgba(174, 174, 192, 0.2), -5px -5px 5px 0 rgba(255, 255, 255, 0.4), inset 2px 2px 4px 0 #fff, inset -2px -2px 4px 0 rgba(0, 0, 0, 0.1);
 	background: $bg;
 	
@@ -113,7 +113,7 @@
 		width: 206px;
 		height: 175px;
 	}
-	@media (max-width: 599px) {
+	@media (max-width: 699px) {
 		width: 100%;
 		height: 101px;
 		max-width: 183px;
@@ -124,12 +124,18 @@
 }
 .action-buttons{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row-reverse;
+	
 	gap:24px;
-	@media (max-width: 1000px) {gap: 20px;}
+	@media (max-width: 1000px) {
+		gap: 20px;
+		flex-direction: column;
+	}
 	@media (max-width: 767px) {gap: 24px;}
-	@media (max-width: 599px) {
+	@media (max-width: 699px) {
 		flex-direction: row-reverse;
-		column-gap:0;
+		gap:0;
+		width: 100%;
+		justify-content: center;
 	}
 }
