@@ -11,6 +11,21 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		@media (max-width: 767px) {
+		 position: relative;
+		 top: auto;
+		 left: auto;
+		transform: translate(0, 0);
+		width: 100%;
+		order: 7;
+		display: flex;
+		justify-content: center;
+		margin-top: 16px;
+		.svg-logo{
+			width: 86px;
+			height: 40px;
+		}
+		}
 	
 	}
 	.profile-group{margin-left: auto;width:fit-content;}
@@ -23,9 +38,32 @@
 	}
 	@media (max-width: 767px) {
 		flex-wrap:wrap;
-	.settings-group {
-		display: flex;
-		.btn-transform span {display: block;}
+		row-gap:16px;
+		padding-bottom: 30px;
+	    .settings-group {
+			display: flex;
+			.btn-transform span {display: block;}
+			.btn-transform{
+				padding-left: 24px;
+				padding-right: 24px;
+			}
+		}
+		.app-name{width: 48%;}
+		.profile-group .btn-light,
+		.profile-group .btn-round {
+			height: 48px;
+			font-size: 16px;
+			min-width: 103px;
+		}
+
+		.profile-group .btn-round .icon-box {
+			width: 40px;
+			height: 40px;
+		}
+
+		.profile-group .btn-round img {
+			width: 22px;
+			height: 22px;
 		}
 	}
 }
@@ -33,15 +71,12 @@
 .battery-box{column-gap:5px;}
 .battery-box.visible-1024{
 	@media (max-width: 1000px) {display: none;}
-
-			
-		
-		
-	
+	@media (max-width: 767px) {display:flex; width: 48%; justify-content: flex-end;}
 }
 .battery-box.hide-1024{
 	display: none;
 	@media (max-width: 1000px) {display: flex;}
+	@media (max-width: 767px) {display:none;}
 }
 .flex-item{
 	font-weight: 500;
@@ -52,11 +87,21 @@
 	.btn-round{width: fit-content;}
 }
 .btn-exit{
-	
 	padding-left: 16px;
 	padding-right: 16px;
 	
 	width: fit-content;
 	min-width: 103px;
 	.btn-img{display: none;}
+	@media (max-width: 699px) {
+		width: 45px;
+		height: 45px;
+		padding-left: 10px;
+		padding-right: 10px;
+		min-width: unset!important;
+		span{display: none;} 
+	.btn-img {
+			display:block;
+		}
+	}
 }
