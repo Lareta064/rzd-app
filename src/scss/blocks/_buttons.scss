@@ -158,3 +158,12 @@
 		justify-content: center;
 	}
 }
+#float-button{
+	width: fit-content;
+	position: fixed;
+	z-index: 10;
+	bottom:40px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-transform: none;
+}
