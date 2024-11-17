@@ -113,7 +113,7 @@
 		}
 	}
 }
-.app-name, .battery-box{width: fit-content;flex-shrink: 0;}
+.app-name, .battery-box{width: fit-content;white-space: nowrap;flex-shrink: 0;}
 .battery-box{column-gap:5px;}
 .battery-box.visible-1024{
 	@media (max-width: 1000px) {display: none;}

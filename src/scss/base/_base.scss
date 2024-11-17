@@ -106,12 +106,13 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
-.flex-row,.field,.profile-group,.flex-item,.main-content-header{
+.flex-row,.field,.profile-group,.flex-item,.main-content-header,.inner-page-header, .btn-back{
 	width: 100%;
 	display: flex;
 	align-items: center;
 	column-gap:12px;
 }
+.btn-back{column-gap: 5px; font-weight: 500; color: $black;}
 .txt-12{font-size: 12px!important;}
 .main-content{
 	width: 100vw;

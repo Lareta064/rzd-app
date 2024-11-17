@@ -1,0 +1,22 @@
+extends ../layouts/layout.pug
+
+block content
+	.main-content.inner-page
+		.inner-page-header
+			a(href="#!").btn-back
+				span.icon-back
+				| Назад
+
+			h1 Измерения
+			
+			//=== app-name ===
+			.app-name.flex-item
+				img.flex-img(src="./img/icons/wifi.svg" width="21" height="21" alt="icon")
+				span Робот №45
+			
+			//==== battery for 1024 ===
+			.battery-box.flex-item
+				img.flex-img(src="./img/icons/battery.svg" width="21" height="21" alt="icon")
+				span 54%
+block variables
+	-var title = "Измерения";

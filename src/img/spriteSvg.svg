@@ -1,6 +1,11 @@
 <svg style="width:0; height:0; visibility: hidden;" xmlns="http://www.w3.org/2000/svg">
 	<symbol>
 		<g>
+			<svg width="7" height="15" viewBox="0 0 7 15" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+				<path d="M5.875 1.95825L1.125 7.49992L5.875 13.0416" stroke="#121212"
+					stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
 		</g>
 	</symbol>
 </svg>
