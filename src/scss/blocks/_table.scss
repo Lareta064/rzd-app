@@ -1,0 +1,62 @@
+.table{
+	width: 100%;
+	.table-row{
+		display: flex;
+		width: 100%;
+		border-radius: 8px;
+	}
+	.cell-user{width: 16.19%;flex-shrink:0;border-left: 0!important;}
+	.cell-user{
+		.cell-title-full{font-size: 14px; display: none;}
+		
+		
+		@media (min-width: 800px) and (max-width:1000px) {
+			.cell-title-full{display: inline-block;}
+			.cell-title-short{display: none;}	
+		
+		}
+		@media(max-width:799px){
+			.cell-title-short {
+				display: inline-block;
+				font-size: 14px;
+			}
+		}
+	}
+	.cell-robot{width:149px;flex-shrink:0; text-align: center;}
+	.cell-date{width:100px;flex-shrink:0;}
+	.cell-time {width:74px;flex-shrink:0;}		
+	.cell-distance {width: 126px;flex-shrink:0;}
+	.cell-comment {flex-grow:1}
+	@media (max-width: 1000px) {
+		.cell-user {width: 212px;}
+		.cell-robot{width: 149px;}
+	}
+	@media (max-width: 799px) {
+		.cell-user {width: 118px;}
+		.cell-robot {width: 118px;}
+	}
+	
+	div[class^="cell-"]{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		padding-left: 16px;
+		padding-right: 16px;
+		font-family: $ff;
+		font-weight: 500;
+		font-size: 16px;
+		color: $black;
+		border-bottom: 1px solid #CCCCD9;
+		border-left: 1px solid #CCCCD9;
+	}
+	.table-head {
+		.table-row{background-color: $darkBlue;}
+		div[class^="cell-"]{
+			color: white;
+			border: 0!important;
+			@media (max-width: 1000px) {
+				font-size: 14px;
+			}
+		}
+
+	}
+}
