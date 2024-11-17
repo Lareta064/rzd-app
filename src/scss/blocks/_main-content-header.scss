@@ -27,7 +27,7 @@
 				
 			}
 		}
-		@media (max-width: 699px) {
+		@media (max-width: 767px) {
 			order:3;
 			width: 60px;
 			height: 28px;
@@ -78,7 +78,7 @@
 		}
 		
 	}
-	@media (max-width: 699px) {
+	@media (max-width: 767px) {
 		row-gap:12px;
 		padding-bottom: 12px;
 		column-gap:0;
@@ -139,7 +139,7 @@
 	width: fit-content;
 	min-width: 103px;
 	.btn-img{display: none;}
-	@media (max-width: 699px) {
+	@media (max-width: 767px) {
 		width: 45px;
 		height: 45px;
 		padding-left: 10px;
