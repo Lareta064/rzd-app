@@ -144,7 +144,7 @@ input[type="submit"] {
 		grid-row-gap: 0px;
 	}
 	@media (max-width: 799px) {grid-column-gap: 14px;}
-	@media (max-width: 768px) {
+	@media (max-width: 767px) {
 		grid-column-gap: 14px;
 		grid-template-columns: 1fr 206px;
 		// grid-template-rows: repeat(2, 1fr);

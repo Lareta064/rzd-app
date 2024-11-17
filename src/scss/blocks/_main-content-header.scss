@@ -59,7 +59,7 @@
 				padding-right: 24px;
 			}
 		}
-		.app-name{width: 45%;}
+		.app-name{width: 50%;}
 		.profile-group .btn-light,
 		.profile-group .btn-round {
 			height: 48px;
@@ -81,9 +81,10 @@
 	@media (max-width: 699px) {
 		row-gap:12px;
 		padding-bottom: 12px;
+		column-gap:0;
 		.profile-group{
 			order: 4;
-			width: calc(100% - 100px);
+			width: calc(100% - 80px);
 			justify-content: flex-end;
 		}
 		.profile-group .btn-light,
@@ -116,7 +117,7 @@
 .battery-box{column-gap:5px;}
 .battery-box.visible-1024{
 	@media (max-width: 1000px) {display: none;}
-	@media (max-width: 767px) {display:flex; width: 45%; justify-content: flex-end;}
+	@media (max-width: 767px) {display:flex; width: 50%; justify-content: flex-end;}
 }
 .battery-box.hide-1024{
 	display: none;

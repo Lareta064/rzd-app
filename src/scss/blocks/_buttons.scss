@@ -42,7 +42,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
+		flex-shrink:0;
 		border-radius: 50%;
 	}
 	
@@ -71,6 +71,13 @@
 	
 	font-weight: 500;
 	color: $black;
+}
+.btn-round span{
+	@media (max-width: 574px) {
+		max-width: 150px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 }
 .btn-grey{
 	width: fit-content;
