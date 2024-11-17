@@ -47,13 +47,16 @@ document.addEventListener("DOMContentLoaded", function (){
         });
       }
       /*==  закрыть модалки  frame-modal по клику на крестик ======*/
-    //   for(let item of modalFramesClose){
-    //     item.addEventListener('click', function(e){
-    //       e.preventDefault();
-    //       item.closest('[data-modal]').classList.remove('visible');
-    //       bodyEl.classList.remove('lock');
-    //     });
-    //   }
+	  if(modalFramesClose){
+		for(let item of modalFramesClose){
+			item.addEventListener('click', function(e){
+			e.preventDefault();
+			item.closest('[data-modal]').classList.remove('visible');
+			bodyEl.classList.remove('lock');
+			});
+		}
+	  }
+      
       /*=============== закрыть модалки по клику вне ===============*/
       for(let frame of modalFrames){
         frame.addEventListener('click', function(e){
