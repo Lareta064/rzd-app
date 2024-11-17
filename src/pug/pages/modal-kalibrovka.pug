@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	//====POPUP Настройки. Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
+	.modal-wrapper.modal-center.visible(data-modal="settings-popup")
+		.modal-content.modal-small
+			.modal-header
+				button(data-close).close-btn
+					span.icon-close
+				.h2 Калибровка
+			.modal-body.column-wrapper
+				button.btn-transform
+					img(src="./img/icons/rulers.svg", width="16" height="16" alt="icon")
+					span Расстояние до калибровки, м
+				button.btn-transform
+					img(src="./img/icons/palette.svg", width="16" height="16" alt="icon")
+					span Фактическое растояние, м
+				
+
+
+		
+block variables
+	-var title = "Главная";

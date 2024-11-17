@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (){
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
     if( modalFrames.length > 0){
-      const modalFramesClose = document.querySelectorAll('[frame-close]');
+      const modalFramesClose = document.querySelectorAll('[data-close]');
 
       for(let item of modalOpen){
         item.addEventListener('click', function(e){

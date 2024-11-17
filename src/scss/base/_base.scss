@@ -41,6 +41,13 @@ body {
 	}
 }
 .none {display: none !important;}
+.w-100{width: 100%!important;}
+.column-wrapper{
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	&>*{width: 100%!important;}
+}
 a,
 a:hover {
 	text-decoration: none;
@@ -106,7 +113,7 @@ input[type="submit"] {
 	-webkit-appearance: none;
 }
 
-.flex-row,.field,.profile-group,.flex-item,.main-content-header,.inner-page-header, .btn-back{
+.flex-row,.field,.profile-group,.flex-item,.main-content-header,.inner-page-header, .btn-back, .btn-wrapper,.close-btn{
 	width: 100%;
 	display: flex;
 	align-items: center;

@@ -1,0 +1,21 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	//====POPUP Настройки. Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
+	.modal-wrapper.modal-center.visible(data-modal="settings-popup")
+		.modal-content.modal-small
+			.modal-header
+				button(data-close).close-btn
+					span.icon-close
+				.h2 Настройки
+			
+			.modal-body.column-wrapper
+				button.btn-grey.w-100 Быстрые кнопки
+				button.btn-grey.w-100 Калибровка
+				button.btn-grey.w-100 Скорость
+
+
+		
+block variables
+	-var title = "Главная";

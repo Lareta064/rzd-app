@@ -6,7 +6,6 @@ block content
 			a(href="#!").btn-back
 				span.icon-back
 				| Назад
-
 			h1 Измерения
 			
 			//=== app-name ===
@@ -64,19 +63,17 @@ block content
 	//==== FLOAT BUTTON ===
 	button.btn#float-button(type="button" data-btn="save-data") Сохранить измерениe
 	
-	//====POPUP Сохранить измерениe ====
-	.modal-wrapper.modal-center(data-modal="save-data")
+	//====POPUP Сохранить измерениe. Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
+	.modal-wrapper.modal-center.visible(data-modal="save-data")
 		.modal-content.modal-small
 			.modal-header
 				.h2 Сохранить измерениe
 			.modal-body
 				.txt-20 Сохранить текущее измерение?
 				.btn-wrapper
-					button(data-close).btn-grey Отмена
+					button(data-close).btn-grey.btn--upper Отмена
 					button.btn ОК
 
-
-
-
+		
 block variables
-	-var title = "Измерения";
+	-var title = "Главная";

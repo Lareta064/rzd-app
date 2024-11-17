@@ -38,3 +38,49 @@
 	}
 	
 }
+.modal-wrapper.modal-center.visible{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.modal-content{
+		border-radius: 16px;
+		background-color: #C4151C;
+		h2, .h2{color: white}
+	}
+}
+.modal-content.modal-small{
+	width: 358px;
+	background-image: url('../img/bg/bg1.svg');
+	background-position: 0 37px;
+	background-size: auto;
+	
+	.modal-header{
+		text-align: center;
+		padding: 24px;
+		position: relative;
+		.close-btn{
+			position: absolute;
+			z-index: 3;
+			top: 12px;
+			right: 12px;
+
+		}
+	}
+	
+	.modal-body{
+		text-align: center;
+		padding: 30px;
+		padding-top: 28px;
+		.txt-20{
+			margin-bottom: 32px;
+		}
+	}
+	.btn, .btn-grey{padding-left: 24px; padding-right: 24px;}
+}
+.close-btn {
+	width: 32px;
+	height: 32px;
+	background-color: $bg;
+	border-radius: 50%;
+	justify-content: center;
+}
