@@ -54,13 +54,11 @@ block content
 								.field
 									span.field-value 128 м
 									span.arrow-small-down
-						.form-group
+						.form-group.custom-input
 							label.input-label Ручной ввод
 							.flex-row
-								.form-item
-									input.form-input(type="text" placeholder="Значение, м")
-								.form-item
-									input.form-input(type="text" placeholder="Значение, м")
+								button.btn-light.txt-left(data-btn="custom-input") Значение, м
+								button.btn-light.txt-left(data-btn="custom-input") Значение, м
 					
 					.fieldset-buttons
 						.form-group
@@ -109,6 +107,18 @@ block content
 					//==== big btn Класс btn-press делает кнопку нажатой===
 					button.btn-big.btn-press
 						span.arrow-down
-	
+
+	//=========POPUP CUSTOM INPUT =====
+	.modal-wrapper(data-modal="custom-input")
+		.modal-content
+			.form-group.custom-input
+				label.input-label Ручной ввод
+				.flex-row
+					//- .form-item
+					//- 	input.form-input(type="text" placeholder="Значение, м")
+					//- .form-item
+					//- 	input.form-input(type="text" placeholder="Значение, м")
+
+		
 block variables
 	-var title = "Главная";

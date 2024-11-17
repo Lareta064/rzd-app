@@ -72,6 +72,17 @@
 	font-weight: 500;
 	color: $black;
 }
+.btn-light.txt-left{
+	padding-left: 14px;
+	padding-right: 14px;
+	min-width: unset;
+	justify-content: flex-start;
+	color: rgba(18, 18, 18, 0.4);
+	@media (max-width: 1000px) {
+		height: 40px;
+		font-size: 14px;
+	}
+}
 .btn-round span{
 	@media (max-width: 574px) {
 		max-width: 150px;
