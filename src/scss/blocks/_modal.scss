@@ -1,5 +1,6 @@
 .modal-wrapper{
 	display: none;
+	
 }
 .modal-wrapper.visible{
 	display: flex;
@@ -9,5 +10,31 @@
 	left: 0;
 	right: 0;
 	z-index: 10;
-	background-color: rgba(0,0,0, .5);
+	background-color: rgba(0,0,0, .6);
+}
+.modal-content .input-label{color: white;}
+.modal-content .form-input{
+	box-shadow: none;
+	background: $bg;
+}
+.modal-content{
+	width: 100%;
+	max-width: 1024px;
+	margin: 0 auto;
+	position: relative;
+	
+	.custom-input {
+		padding-left: 32px;
+		padding-right: 32px;
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -200%);
+		@media (max-width: 1000px) {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+	}
+	
 }

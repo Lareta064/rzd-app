@@ -64,11 +64,10 @@ block content
 						.form-group
 							label.input-label.txt-12 Предустановки 
 							.flex-row.presets-row
-								.btn-slim xxxxx м
-								.btn-slim.btn-slim--active 1024 м
-								.btn-slim xxxxx м
-								.btn-slim xxxxx м
-								.btn-slim xxxxx м
+								button(type="button").btn-slim xxxxx м
+								button(type="button").btn-slim.btn-slim--active 1024 м
+								button(type="button").btn-slim xxxxx м
+								
 						button.btn Старт
 			
 			.column-two
@@ -114,10 +113,10 @@ block content
 			.form-group.custom-input
 				label.input-label Ручной ввод
 				.flex-row
-					//- .form-item
-					//- 	input.form-input(type="text" placeholder="Значение, м")
-					//- .form-item
-					//- 	input.form-input(type="text" placeholder="Значение, м")
+					.form-item
+						input.form-input#focus-input(type="text" placeholder="Значение, м")
+					.form-item
+						input.form-input(type="text" placeholder="Значение, м")
 
 		
 block variables

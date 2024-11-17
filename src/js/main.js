@@ -21,16 +21,15 @@ document.addEventListener("DOMContentLoaded", function (){
 [frame-modal] - js-modal
 */
 	/* =============== modal с атрибутом frame-modal ===============*/ 
-    const modalFramesOpen = document.querySelectorAll('[data-btn]');
+    const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
     if( modalFrames.length > 0){
       const modalFramesClose = document.querySelectorAll('[frame-close]');
 
-      for(let item of modalFramesOpen){
+      for(let item of modalOpen){
         item.addEventListener('click', function(e){
           for(let item of  modalFrames){
             item.classList.remove('visible');
-            
             bodyEl.classList.remove('lock');
           }
           e.preventDefault();
@@ -41,21 +40,20 @@ document.addEventListener("DOMContentLoaded", function (){
             if(frameAttr == itemAttr){
               frame.classList.add('visible');
               bodyEl.classList.add('lock');
+			  if(frame.querySelector('#focus-input')){frame.querySelector('#focus-input').focus();}
 			 
             }
           }
         });
       }
       /*==  закрыть модалки  frame-modal по клику на крестик ======*/
-      for(let item of modalFramesClose){
-        item.addEventListener('click', function(e){
-          e.preventDefault();
-          item.closest('[data-modal]').classList.remove('visible');
-          bodyEl.classList.remove('lock');
-		  
-		  
-        });
-      }
+    //   for(let item of modalFramesClose){
+    //     item.addEventListener('click', function(e){
+    //       e.preventDefault();
+    //       item.closest('[data-modal]').classList.remove('visible');
+    //       bodyEl.classList.remove('lock');
+    //     });
+    //   }
       /*=============== закрыть модалки по клику вне ===============*/
       for(let frame of modalFrames){
         frame.addEventListener('click', function(e){
@@ -63,6 +61,15 @@ document.addEventListener("DOMContentLoaded", function (){
             this.classList.remove(`visible`);
             bodyEl.classList.remove('lock');
           }
+		  if(frame.querySelector('.custom-input')){
+			if (e.target.closest('.custom-input')) {
+        		return; // Прекращаем выполнение, если это так
+    		}else{
+   					this.classList.remove(`visible`);
+            		bodyEl.classList.remove('lock');
+			  }
+		  }
+
         });
       }
     }
