@@ -1,0 +1,22 @@
+extends ../layouts/layout.pug
+
+block content
+	//====Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
+	.modal-wrapper.modal-center.visible(data-modal="save-data")
+		.modal-content.modal-small
+			.modal-header
+				button(data-close).close-btn
+					span.icon-close
+				.h2 Скорость
+			.modal-body
+				.wrapper
+					.range
+						input#range(type='range' min='0' max='6' value='0')
+						.value 0
+
+				.btn-wrapper
+					button.btn ОК
+
+		
+block variables
+	-var title = "Главная";

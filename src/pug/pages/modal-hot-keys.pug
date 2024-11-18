@@ -1,0 +1,30 @@
+extends ../layouts/layout.pug
+
+block content
+	
+	//====POPUP Быстрые кнопки. Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
+	.modal-wrapper.modal-center.visible(data-modal="settings-popup")
+		.modal-content.modal-small
+			.modal-header
+				button(data-close).close-btn
+					span.icon-close
+				.h2 Быстрые кнопки
+			.modal-body
+				.column-wrapper
+					button.btn-transform.txt-left
+						img(src="./img/icons/up.svg", width="20" height="20" alt="icon")
+						span.txt-black 1024 м
+					button.btn-transform.txt-left
+						img(src="./img/icons/down.svg", width="20" height="20" alt="icon")
+						span.txt-black 1024 м
+					button.btn-transform.txt-left
+						img(src="./img/icons/up-down.svg", width="20" height="20" alt="icon")
+						span Расстояние, м
+				.btn-wrapper
+					button.btn ok
+				
+
+
+		
+block variables
+	-var title = "Главная";

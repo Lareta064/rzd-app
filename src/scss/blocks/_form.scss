@@ -148,3 +148,74 @@ select:-webkit-autofill:focus {
     row-gap: 14px;
   }
 }
+/*******************/
+input[type="range"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px;
+  /*  overflow: hidden;  remove this line*/
+
+  /* New additions */
+  height: 8px;
+  box-shadow: inset -5px -5px 4px 0 rgba(255, 255, 255, 0.3), inset 5px 5px 4px 0 rgba(174, 174, 192, 0.2);
+    background: $bg;
+}
+
+/* Thumb: webkit */
+input[type="range"]::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 18px;
+  width: 26px;
+  background-color: $bg;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 5px 5px 10px 0 rgba(174, 174, 192, 0.2), -5px -5px 5px 0 rgba(255, 255, 255, 0.4), inset 2px 2px 4px 0 #fff, inset -2px -2px 4px 0 rgba(0, 0, 0, 0.1);
+  
+
+  /* box-shadow: -407px 0 0 400px #f50; emove this line */
+  transition: .2s ease-in-out;
+}
+
+/* Thumb: Firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #f50;
+  border-radius: 50%;
+  border: none;
+
+  /* box-shadow: -407px 0 0 400px #f50; emove this line */
+  transition: .2s ease-in-out;
+}
+
+/* Hover, active & focus Thumb: Webkit */
+
+
+
+input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
+}
+
+/* Hover, active & focus Thumb: Firfox */
+
+
+
+input[type="range"]:active::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  box-shadow: 0 0 0 13px rgba(255, 85, 0, .2)
+}

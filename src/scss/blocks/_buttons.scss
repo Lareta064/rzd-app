@@ -177,8 +177,10 @@
 }
 .btn-wrapper{
 	column-gap:18px;
+	justify-content: center;
 	&>*{
-		min-width: unset; 
+		min-width: 138px; 
+		width: fit-content;
 		padding-left: 16px; 
 		padding-right: 16px;}
 }

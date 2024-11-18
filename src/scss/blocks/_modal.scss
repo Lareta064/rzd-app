@@ -56,8 +56,13 @@
 	
 	.modal-header{
 		text-align: center;
-		padding: 24px;
+		padding: 12px 24px;
 		position: relative;
+		.h2{padding-top: 12px;}
+		.modal-header__img{
+			
+			height: 48px;
+		}
 		.close-btn{
 			position: absolute;
 			z-index: 3;
@@ -69,11 +74,9 @@
 	
 	.modal-body{
 		text-align: center;
-		padding: 30px;
+		padding: 26px;
 		padding-top: 28px;
-		.txt-20{
-			margin-bottom: 32px;
-		}
+		.btn-wrapper{margin-top: 28px;}
 	}
 	.btn, .btn-grey{padding-left: 24px; padding-right: 24px;}
 }

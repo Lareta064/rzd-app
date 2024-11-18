@@ -17,9 +17,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		});
 	}
-/*[frame-btn] - modal-btn
-[frame-modal] - js-modal
-*/
+
 	/* =============== modal с атрибутом frame-modal ===============*/ 
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
@@ -76,5 +74,18 @@ document.addEventListener("DOMContentLoaded", function (){
         });
       }
     }
+	const sliderEl = document.querySelector("#range")
+	const sliderValue = document.querySelector(".value")
+	if(sliderEl){
+		sliderEl.addEventListener("input", (event) => {
+			const tempSliderValue = event.target.value; 
+			
+			sliderValue.textContent = tempSliderValue;
+			
+			const progress = (tempSliderValue / sliderEl.max) * 100;
+			
+			sliderEl.style.background = `linear-gradient(to right, #c4151c ${progress}%, rgb(240, 240, 243) ${progress}%)`;
+		});
+	}
 
 });

@@ -1,0 +1,21 @@
+extends ../layouts/layout.pug
+
+block content
+
+	
+	//====Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
+	.modal-wrapper.modal-center.visible(data-modal="save-data")
+		.modal-content.modal-small
+			.modal-header
+				button(data-close).close-btn
+					span.icon-close
+				.h2 Калибровка
+			.modal-body
+				.txt-20 Осуществить калибровку робота?
+				.btn-wrapper
+					button(data-close).btn-grey.btn--upper.w-100 Отмена
+					button.btn.w-100 ОК
+
+		
+block variables
+	-var title = "Главная";

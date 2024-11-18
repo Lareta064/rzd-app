@@ -1,0 +1,19 @@
+extends ../layouts/layout.pug
+
+block content
+	//====Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
+	.modal-wrapper.modal-center.visible(data-modal="save-data")
+		.modal-content.modal-small
+			.modal-header
+				button(data-close).close-btn
+					span.icon-close
+				.modal-header__img
+					img(src="./img/icons/big-battery.svg", width="48" height="48" alt="icon")
+			.modal-body
+				.txt-20 #[strong Внимание!]<br>Низкий заряд батареи
+				.btn-wrapper
+					button.btn ОК
+
+		
+block variables
+	-var title = "Главная";
