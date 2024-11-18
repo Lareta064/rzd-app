@@ -183,7 +183,7 @@ input[type="range"]::-moz-range-thumb {
 	margin-bottom: 16px;
 }
 .modal-wrapper.modal-horizontal .modal-content{
-	@media (min-width: 799px) and (max-width: 992px) {
+	@media (min-width: 720px) and (max-width: 999px) {
 		width: 624px;
 		background-image: url('../img/bg/bg-medium.svg');
 		background-position: 0 20px;
