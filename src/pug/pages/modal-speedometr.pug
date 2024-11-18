@@ -2,17 +2,17 @@ extends ../layouts/layout.pug
 
 block content
 	//====Окно отображается за счет класса .visible. Изначально этого класса быть не должно, он добавляется через скрипт. Сейчас этот класс добавлен для демонстрации ====
-	.modal-wrapper.modal-center.visible(data-modal="save-data")
+	.modal-wrapper.modal-center.modal-horizontal.visible(data-modal="save-data")
 		.modal-content.modal-small
 			.modal-header
 				button(data-close).close-btn
 					span.icon-close
-				.h2 Скорость
+				.title-24 Скорость
 			.modal-body
 				.range-wrapper
 					.range
 						.range-scale
-							.range-value 1 м/с
+							.range-value 0 м/с
 							.range-value 6 м/с
 						input#range(type='range' min='0' max='6' value='0')
 						
@@ -21,13 +21,25 @@ block content
 							span.value 0
 							span м/с
 					.range-buttons-title.txt-20 Типовые скорости
-					.range-buttons
-						button.btn-slim 1 м/с
-						button.btn-slim 2 м/с
-						button.btn-slim 3 м/с
-						button.btn-slim 4 м/с
-						button.btn-slim 5 м/с
-						button.btn-slim 6 м/с
+					.range-buttons#range-buttons
+						button.btn-slim.range-btn
+							span.range-btn__val 1 
+							| м/с
+						button.btn-slim.range-btn
+							span.range-btn__val 2 
+							| м/с
+						button.btn-slim.range-btn
+							span.range-btn__val 3 
+							| м/с
+						button.btn-slim.range-btn
+							span.range-btn__val 4 
+							| м/с
+						button.btn-slim.range-btn
+							span.range-btn__val 5 
+							| м/с
+						button.btn-slim.range-btn
+							span.range-btn__val 6 
+							| м/с
 
 				.btn-wrapper
 					button.btn ОК

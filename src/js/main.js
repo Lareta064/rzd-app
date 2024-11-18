@@ -74,18 +74,41 @@ document.addEventListener("DOMContentLoaded", function (){
         });
       }
     }
-	const sliderEl = document.querySelector("#range")
-	const sliderValue = document.querySelector(".value")
-	if(sliderEl){
+	const sliderEl = document.querySelector("#range");
+	const sliderValue = document.querySelector(".value");
+	const rangeBtnWrapper = document.querySelector("#range-buttons");
+	const rangeBtn = rangeBtnWrapper.querySelectorAll(".range-btn");
+
+	if (sliderEl) {
+		// Обработчик для изменения значения слайдера
 		sliderEl.addEventListener("input", (event) => {
-			const tempSliderValue = event.target.value; 
-			
+			const tempSliderValue = event.target.value;
+
+			// Обновляем текстовое значение
 			sliderValue.textContent = tempSliderValue;
-			
-			const progress = (tempSliderValue / sliderEl.max) * 100;
-			
-			sliderEl.style.background = `linear-gradient(to right, #c4151c ${progress}%, rgb(240, 240, 243) ${progress}%)`;
+
+			// Обновляем фон слайдера
+			updateSliderBackground(tempSliderValue);
+		});
+
+		// Обработчик для кнопок
+		rangeBtn.forEach((item) => {
+			item.addEventListener("click", () => {
+				// Считываем значение из кнопки
+				const itemVal = parseInt(item.querySelector(".range-btn__val").textContent, 10);
+
+				// Устанавливаем значение слайдера
+				sliderEl.value = itemVal;
+
+				// Программно вызываем событие input для синхронизации положения
+				sliderEl.dispatchEvent(new Event("input", { bubbles: true }));
+			});
 		});
 	}
 
+	// Функция обновления фона слайдера
+	function updateSliderBackground(value) {
+		const progress = (value / sliderEl.max) * 100;
+		sliderEl.style.background = `linear-gradient(to right, #c4151c ${progress}%, rgb(240, 240, 243) ${progress}%)`;
+	}
 });
