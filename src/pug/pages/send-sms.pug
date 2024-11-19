@@ -1,0 +1,30 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-page
+		//=== close button ===
+		a(href="#!").btn-circle
+			.icon-close
+		
+		.form-page__logo
+			svg.logo-white
+				use(href='./img/logo.svg#logo-white')
+			
+		.form-page__body
+			
+			form.login-form.passw-form
+				h1.h1 Восстановить пароль
+				.sms-code-item
+					.form-item
+						label.input-label Код из письма/смс
+						.code-group
+							input.code-input(type="number" name="code_1")
+							input.code-input(type="number" name="code_2")
+							input.code-input(type="number" name="code_3")
+							input.code-input(type="number" name="code_4")
+					
+					p.txt-grey.txt-14.mt-24 Код действует в течение: #[span.txt-black.txt-medium 2:59]
+					.btn-wrapper
+					a(href="#!").btn ок
+block variables
+	-var title = "Восстановить пароль";

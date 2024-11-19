@@ -1,0 +1,24 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-page
+		//=== close button ===
+		a(href="#!").btn-circle
+			.icon-close
+		
+		.form-page__logo
+			svg.logo-white
+				use(href='./img/logo.svg#logo-white')
+			
+		.form-page__body
+			
+			form.login-form.passw-form
+				h1.h1 Восстановить пароль
+				.form-item
+					label.input-label Телефон/почта к которому привязан аккаунт
+					input.form-input(type="email" name="email" placeholder="example@mail.ru")
+				p.txt-passw.txt-14.mt-24 Мы отправим Вам письмо с кодом для сброса пароля
+				.btn-wrapper
+					a(href="#!").btn ок
+block variables
+	-var title = "Восстановить пароль";

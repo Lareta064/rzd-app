@@ -1,0 +1,16 @@
+.passw-form .h1{
+	text-align: center;
+	@media (max-width: 767px) {
+	text-align: left;
+	}
+}
+.login-form .btn{
+	max-width: 300px!important;
+}
+.sms-code-item{
+	width: fit-content;
+	margin: 0 auto;
+	@media (max-width: 767px) {
+	margin-left: 0;
+	}
+}

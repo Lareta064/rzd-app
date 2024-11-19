@@ -128,4 +128,32 @@ document.addEventListener("DOMContentLoaded", function (){
 			}
 		})
 	}
+	const inputs = document.querySelectorAll(".code-input");
+	if(inputs.length > 0){
+		// Устанавливаем фокус на первый инпут при загрузке
+		inputs[0].focus();
+
+		inputs.forEach((input, index) => {
+			input.addEventListener("input", (event) => {
+				const value = event.target.value;
+
+				// Убедимся, что введена только одна цифра
+				if (value.length > 1) {
+					event.target.value = value.slice(0, 1);
+				}
+
+				// Перемещаем фокус на следующий инпут, если есть
+				if (value && index < inputs.length - 1) {
+					inputs[index + 1].focus();
+				}
+			});
+
+			// Перемещаем фокус на предыдущий инпут при нажатии Backspace
+			input.addEventListener("keydown", (event) => {
+				if (event.key === "Backspace" && !event.target.value && index > 0) {
+					inputs[index - 1].focus();
+				}
+			});
+		});
+	}
 });
