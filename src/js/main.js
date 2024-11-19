@@ -112,22 +112,26 @@ document.addEventListener("DOMContentLoaded", function (){
 		sliderEl.style.background = `linear-gradient(to right, #c4151c ${progress}%, rgb(240, 240, 243) ${progress}%)`;
 	}
 	/*====input passw */
-	const passwGroup = document.querySelector('.form-passw');
-	if(passwGroup){
-		const passwInput = passwGroup.querySelector('#pass-input');
-		const showPassBtn =  passwGroup.querySelector('.show-passw');
-		showPassBtn.addEventListener('click', (e)=>{
-			
-			e.preventDefault();
-			if(showPassBtn.classList.contains('active')){
-				showPassBtn.classList.remove('active');
-				passwInput.setAttribute('type', 'password');
-			}else{
-				showPassBtn.classList.add('active');
-				passwInput.setAttribute('type', 'text');
-			}
-		})
+	const passwGroup = document.querySelectorAll('.form-passw');
+	if(passwGroup.length>0){
+		passwGroup.forEach((item)=>{
+
+			const passwInput = item.querySelector('.pass-input');
+			const showPassBtn =  item.querySelector('.show-passw');
+			showPassBtn.addEventListener('click', (e)=>{
+				
+				e.preventDefault();
+				if(showPassBtn.classList.contains('active')){
+					showPassBtn.classList.remove('active');
+					passwInput.setAttribute('type', 'password');
+				}else{
+					showPassBtn.classList.add('active');
+					passwInput.setAttribute('type', 'text');
+				}
+			});
+		});
 	}
+	/*****sms-code-input**** */
 	const inputs = document.querySelectorAll(".code-input");
 	if(inputs.length > 0){
 		// Устанавливаем фокус на первый инпут при загрузке

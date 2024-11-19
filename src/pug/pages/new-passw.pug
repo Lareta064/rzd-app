@@ -1,0 +1,28 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-page
+		//=== close button ===
+		a(href="#!").btn-circle
+			.icon-close
+		
+		.form-page__logo
+			svg.logo-white
+				use(href='./img/logo.svg#logo-white')
+			
+		.form-page__body
+			
+			form.login-form.passw-form
+				h1.h1 Восстановить пароль
+				.form-item.form-passw
+					label.input-label Придумайте новый пароль
+					input.form-input.pass-input(type="password" name="pass" placeholder="Введите пароль")
+					button(type="button").show-passw
+				.form-item.form-passw
+					label.input-label Повторите новый пароль
+					input.form-input.pass-input(type="password" name="pass" placeholder="Введите пароль")
+					button(type="button").show-passw
+				.btn-wrapper
+					a(href="#!").btn ок
+block variables
+	-var title = "Восстановить пароль";
