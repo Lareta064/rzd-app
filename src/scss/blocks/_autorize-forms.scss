@@ -16,7 +16,7 @@
 		z-index: 3;
 		background: #e4e8eb;
 		}
-	@media(max-width:767px) {
+	@media(max-width:768px) {
 		flex-direction: column;
 		
 		.form-page__logo{
@@ -51,7 +51,7 @@
 		padding-left: 90px;
 		padding-right: 50px;
 		form{width: 100%;}
-		background: #F0F0F3;
+		// background: #F0F0F3;
 		@media (max-width: 819px) {
 		width: 520px;
 		}
@@ -128,3 +128,18 @@
 }
 .login-form .form-item +.form-item{margin-top: 20px;}
 
+.form-page__body:after{
+	content:'' ;
+	width: 100%;		
+	bottom: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609 576" preserveAspectRatio="none"><path d="M38 506.804L38 69.1962C38 59.3073 34.9457 49.6597 29.2547 41.5725L0 0H609V576H76L46.7453 534.428C41.0543 526.34 38 516.693 38 506.804Z" fill="%23F0F0F3"/></svg>') no-repeat center / 100% 100%;
+	@media (max-width: 767px) {
+
+	background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 641" preserveAspectRatio="none"><path d="M69.1962 38H650.804C660.693 38 670.34 34.9457 678.427 29.2547L720 0V641H0V76L41.5725 46.7453C49.6597 41.0543 59.3073 38 69.1962 38Z" fill="%23F0F0F3"/></svg>') no-repeat center / 100% 100%;
+
+		
+	}
+}

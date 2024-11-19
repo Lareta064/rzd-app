@@ -5,6 +5,7 @@
 		width: 100%;
 		border-radius: 8px;
 	}
+	.table-body{margin-bottom: 60px;}
 	.cell-user{width: 16.19%;flex-shrink:0;border-left: 0!important;}
 	.cell-user{
 		.cell-title-full{font-size: 14px; display: none;}
@@ -107,8 +108,8 @@
 		}
 	}
 	.table-body{
-		margin-left: 10px;
-		margin-right: 10px;
+		margin: 10px;
+		
 		.table-row{
 			box-shadow: inset -5px -5px 4px 0 rgba(255, 255, 255, 0.3), inset 5px 5px 4px 0 rgba(174, 174, 192, 0.2);
 				background: $bg;
