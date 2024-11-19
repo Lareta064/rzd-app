@@ -60,10 +60,11 @@
 		position: relative;
 		.h2, .title-24, h2{line-height: 1;}
 		.modal-header__img{
-			
 			height: 48px;
+			position: relative;
+			top: -12px;
 		}
-		.close-btn{
+		.btn-circle{
 			position: absolute;
 			z-index: 3;
 			top: 12px;
