@@ -14,7 +14,8 @@ block content
 			
 			form.login-form
 				h1.h1 Авторизация
-				.form-item
+				//==== если будет валидация формы, то при неверном заполнении, что бы появился красный бордер, надо добавить класс error  блоку, внутри которого и инпут и label 
+				.form-item.error
 					label.input-label Логин
 					input.form-input(type="text" name="login" placeholder="Введите логин")
 				.form-item.form-passw

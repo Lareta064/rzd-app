@@ -8,8 +8,10 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
-   box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-box-shadow: 0 0 0px 1000px #f0f0f3 inset;
+   box-shadow: 0 0 0px 1000px #f0f0f3 inset;
+   box-shadow: 5px 5px 10px 0 rgba(174, 174, 192, 0.2), -5px -5px 5px 0 rgba(255, 255, 255, 0.4), inset 2px 2px 4px 0 #fff, inset -2px -2px 4px 0 rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.6) 100%);
 } 
 .input-label,.form-input{
     display: block;
@@ -17,6 +19,13 @@ select:-webkit-autofill:focus {
     font-weight: 400;
     font-size: 14px;
     color: $black;
+}
+.error{
+  .form-input, .form-input::placeholder,.input-label{color: #c4151c!important;}
+  .form-input{
+    border: 1px solid #c4151c!important;
+   
+  }
 }
 .input-label{
   margin-bottom: 10px; line-height: 18px; padding-left: 4px;
