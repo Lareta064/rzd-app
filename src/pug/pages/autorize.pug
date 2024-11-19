@@ -1,0 +1,28 @@
+extends ../layouts/layout.pug
+
+block content
+	.form-page
+		//=== close button ===
+		a(href="#!").btn-circle
+			.icon-close
+		
+		.form-page__logo
+			svg.logo-white
+				use(href='./img/logo.svg#logo-white')
+			
+		.form-page__body
+			
+			form.login-form
+				h1.h1 Авторизация
+				.form-item
+					label.input-label Логин
+					input.form-input(type="text" name="login" placeholder="Введите логин")
+				.form-item.form-passw
+					label.input-label Пароль
+					input.form-input#pass-input(type="password" name="pass" placeholder="Введите пароль")
+					button(type="button").show-passw
+				.btn-wrapper
+					a(href="#!").btn-grey Забыли пароль?
+					a(href="#!").btn Войти
+block variables
+	-var title = "Авторизация";

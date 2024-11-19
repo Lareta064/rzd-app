@@ -1,8 +1,12 @@
-.svg-logo{
+.svg-logo,.logo-white{
 	width: 60px;
 	height: 30px;
 	display: inline-block;
-}	
+}
+.logo-white{
+	width: 141px;
+	height: 63px;
+}
 .arrow-up, .arrow-down,.arrow-small-up,.arrow-small-down{
 	width: 106px;
 	height: 106px;
@@ -46,4 +50,9 @@ background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='106' heigh
 	display: inline-block;
 	background-size: 20px;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15 5L5 15' stroke='%23121212' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3cpath d='M5 5L15 15' stroke='%23121212' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' /%3e%3c/svg%3e");
+}
+.svg-phone{
+	width: 50px;
+	height: 50px;
+	color: red;
 }

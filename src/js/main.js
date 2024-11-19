@@ -77,10 +77,10 @@ document.addEventListener("DOMContentLoaded", function (){
 	const sliderEl = document.querySelector("#range");
 	const sliderValue = document.querySelector(".value");
 	const rangeBtnWrapper = document.querySelector("#range-buttons");
-	const rangeBtn = rangeBtnWrapper.querySelectorAll(".range-btn");
+	
 
 	if (sliderEl) {
-		// Обработчик для изменения значения слайдера
+		const rangeBtn = rangeBtnWrapper.querySelectorAll(".range-btn");
 		sliderEl.addEventListener("input", (event) => {
 			const tempSliderValue = event.target.value;
 
@@ -110,5 +110,22 @@ document.addEventListener("DOMContentLoaded", function (){
 	function updateSliderBackground(value) {
 		const progress = (value / sliderEl.max) * 100;
 		sliderEl.style.background = `linear-gradient(to right, #c4151c ${progress}%, rgb(240, 240, 243) ${progress}%)`;
+	}
+	/*====input passw */
+	const passwGroup = document.querySelector('.form-passw');
+	if(passwGroup){
+		const passwInput = passwGroup.querySelector('#pass-input');
+		const showPassBtn =  passwGroup.querySelector('.show-passw');
+		showPassBtn.addEventListener('click', (e)=>{
+			
+			e.preventDefault();
+			if(showPassBtn.classList.contains('active')){
+				showPassBtn.classList.remove('active');
+				passwInput.setAttribute('type', 'password');
+			}else{
+				showPassBtn.classList.add('active');
+				passwInput.setAttribute('type', 'text');
+			}
+		})
 	}
 });

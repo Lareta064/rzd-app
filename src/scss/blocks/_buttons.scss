@@ -184,3 +184,10 @@
 		padding-left: 16px; 
 		padding-right: 16px;}
 }
+.btn-circle {
+	width: 32px;
+	height: 32px;
+	background-color: $bg;
+	border-radius: 50%;
+	justify-content: center;
+}
