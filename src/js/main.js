@@ -44,6 +44,26 @@ document.addEventListener("DOMContentLoaded", function (){
           }
         });
       }
+	  /** */
+	 const dataInputs = document.querySelectorAll('[data-input]');
+
+		if (dataInputs.length > 0) {
+			const dataButtons = document.querySelectorAll('[data-btn="custom-input"]');
+
+			dataInputs.forEach((input) => {
+				input.addEventListener('blur', () => {
+					const inputData = input.getAttribute('data-input'); // Исправлено
+					const inputValue = input.value;
+
+					dataButtons.forEach((button) => {
+						const buttonData = button.getAttribute('data-input-val'); // Исправлено
+						if (inputData === buttonData) {
+							button.textContent = inputValue ? `${inputValue}, м` : 'Значение, м';
+						}
+					});
+				});
+			});
+		}
       /*==  закрыть модалки  frame-modal по клику на крестик ======*/
 	  if(modalFramesClose){
 		for(let item of modalFramesClose){
@@ -54,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function (){
 			});
 		}
 	  }
-      
+	 
       /*=============== закрыть модалки по клику вне ===============*/
       for(let frame of modalFrames){
         frame.addEventListener('click', function(e){

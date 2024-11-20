@@ -198,6 +198,7 @@ input.hide-input{
 .check-btn {
 	position: relative;
 	cursor:pointer;
+	flex-grow:1;
 	input:checked + span{
 		color: white;
 		background-color: $accent;

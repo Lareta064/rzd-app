@@ -57,16 +57,14 @@ block content
 						.form-group.custom-input
 							label.input-label Ручной ввод
 							.flex-row
-								button.btn-light.txt-left(data-btn="custom-input") Значение, м
-								button.btn-light.txt-left(data-btn="custom-input") Значение, м
+								button.btn-light.txt-left(data-btn="custom-input" data-input-val="1") Значение, м
+								button.btn-light.txt-left(data-btn="custom-input" data-input-val="2") Значение, м
 					
 					.fieldset-buttons
 						.form-group
 							label.input-label.txt-12 Предустановки 
 							.flex-row.presets-row
-								//- button(type="button").btn-slim xxxxx м
-								//- button(type="button").btn-slim.btn-slim--active 1024 м
-								//- button(type="button").btn-slim xxxxx м
+								
 								label.check-btn
 									input.hide-input(type="radio" name="preset_btn")
 									span.btn-slim xxxxx м
@@ -118,15 +116,15 @@ block content
 						span.arrow-down
 
 	//=========POPUP CUSTOM INPUT =====
-	.modal-wrapper(data-modal="custom-input")
+	.modal-wrapper.modal-custom-input(data-modal="custom-input")
 		.modal-content
 			.form-group.custom-input
 				label.input-label Ручной ввод
 				.flex-row
 					.form-item
-						input.form-input#focus-input(type="text" placeholder="Значение, м")
+						input.form-input#focus-input(type="number" placeholder="Значение, м" data-input="1")
 					.form-item
-						input.form-input(type="text" placeholder="Значение, м")
+						input.form-input(type="number" placeholder="Значение, м" data-input="2")
 
 		
 block variables
