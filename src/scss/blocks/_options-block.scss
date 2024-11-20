@@ -2,9 +2,12 @@
 	&>*+*{margin-top:14px;}
 	.flex-row{display: none;}
 	@media (max-width: 1000px) {
+		&>*+* {margin-top: 12px;}
+				
+			
 		.flex-row {
 			display: flex;
-			margin-bottom: 18px;
+			margin-bottom: 12px;
 			&>*{flex-grow: 1;}
 		}
 	}
