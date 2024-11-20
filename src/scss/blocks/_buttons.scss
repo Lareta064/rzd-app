@@ -114,11 +114,7 @@
 	border-radius: 8px;
 	box-shadow: 5px 5px 10px 0 rgba(174, 174, 192, 0.2), -5px -5px 5px 0 rgba(255, 255, 255, 0.4), inset 2px 2px 4px 0 #fff, inset -2px -2px 4px 0 rgba(0, 0, 0, 0.1);
 }
-.btn-slim.btn-slim--active{
-	color: white;
-	background-color: $accent;
-	box-shadow: none;
-}
+
 .btn-big{
 	border-radius: 12px 12px 100px 100px;
 	width: 212px;
@@ -191,4 +187,20 @@
 	background-color: #e4e8eb;;
 	border-radius: 50%;
 	justify-content: center;
+}
+input.hide-input{
+	width: 0.01em;
+	height: 0.01em;
+	position: absolute;
+	top: 0;
+	left: 0;z-index: -1;
+}
+.check-btn {
+	position: relative;
+	cursor:pointer;
+	input:checked + span{
+		color: white;
+		background-color: $accent;
+		box-shadow: none;
+	}
 }
