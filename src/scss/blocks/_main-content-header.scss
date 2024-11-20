@@ -235,4 +235,86 @@
 	.options-block{
 		.flex-row {display: none;}
 	}
+	/********************/
+	.input-label{
+		font-size: 14px;
+		margin-bottom: 9px
+	}
+	.field{
+		height: 40px;
+		font-size: 14px;
+	}
+ .fieldset{
+	.form-input,
+	.field,
+	.btn-slim {
+		height: 48px;
+		font-size: 16px;
+	}
+ }
+.fieldset-inputs{
+	grid-template-columns: 1fr;
+	row-gap: 20px;
+	margin-bottom: 24px;
+}
+	.fieldset-buttons .btn {
+		width: 100%;
+	}
+.fieldset-buttons{
+	row-gap: 24px;
+	flex-wrap: wrap;
+}
+.arrow-up,
+.arrow-down{
+	background-size: 96px 96px;
+}
+.inner-page-header{
+	padding: 15px 16px;
+}
+.btn-big{
+	width: 206px;
+	height: 175px;
+}
+.action-buttons{
+	gap: 24px;
+	flex-direction: column;
+}
+/**************/
+.modal-wrapper.modal-horizontal .modal-content{
+	width: 624px;
+		background-image: url('../img/bg/bg-medium.svg');
+		background-position: 0 20px;
+	
+		.range-wrapper {
+			padding-top: 0;
+		}
+	
+		.range-wrapper .range {
+			margin-bottom: 20px;
+		}
+	
+		.range-wrapper .range-buttons-title {
+			display: none;
+		}
+}
+.passw-form .h1 {text-align: left;}
+.sms-code-item {margin-left: 0;}
+.table{
+	.cell-user {
+			width: 118px;
+		}
+	
+		.cell-robot {
+			width: 118px;
+		}
+	.cell-user{
+		.cell-title-short {
+				display: inline-block;
+				font-size: 14px;
+			}
+	}
+}
+		
+	
+
 }
