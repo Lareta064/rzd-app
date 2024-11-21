@@ -1,6 +1,6 @@
 .passw-form .h1{
 	text-align: center;
-	@media (max-width: 768px) and (orientation: portrait) {
+	@media (max-width: 820px) and (orientation: portrait) {
 	text-align: left;
 	}
 }
@@ -10,7 +10,7 @@
 .sms-code-item{
 	width: fit-content;
 	margin: 0 auto;
-	@media (max-width: 768px) and (orientation: portrait) {
+	@media (max-width: 820px) and (orientation: portrait) {
 	margin-left: 0;
 	}
 }
