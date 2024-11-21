@@ -156,7 +156,7 @@
 		.btn-img {display:block;}
 	}
 }
-@media (min-width: 1024px) and (orientation: portrait) {
+@media screen and (min-width: 1024px) and (max-aspect-ratio: 1/1) and (pointer: coarse) {
 
 	.main-content-header {
 		flex-wrap: wrap;
